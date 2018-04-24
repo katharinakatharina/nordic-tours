@@ -1,3 +1,267 @@
-// Place all the styles related to the simple_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Sidewide
+
+body {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3
+p,
+a {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container-fluid {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.usp {
+  background-color: #19aac4;
+  padding-bottom: 2px;
+  z-index: 2;
+}
+
+.usp ul {
+  list-style-type: none;
+  padding-top: 14px;
+}
+
+.usp p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.usp li {
+  text-align: center;
+}
+
+// Navigation
+
+.navbar {
+  border-bottom: 1px solid #fff;
+}
+
+.navbar li a {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  color: #bfbdbd;
+  font-size: 12px;
+}
+
+.navbar span p {
+  color: #bfbdbd;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.navbar span p:hover {
+  color: #fff;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .container-fluid {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.navbar-default {
+}
+
+.navbar ul {
+  text-align: right;
+  list-style-type: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  transition: color 200ms;
+  -webkit-transition: color 200ms;
+  letter-spacing: 0.05em;
+  padding: 15px 10px;
+  margin-right: 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-form {
+  margin-top: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.navbar-form input {
+  height:25px;
+  width: 90%;
+  border: none;
+  font-style: italic;
+}
+
+.navbar-form button {
+  background-color: white;
+  border: none;
+}
+
+.nav-tabs {
+  border-bottom: 0px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+  border: none;
+}
+
+.block1 {
+  margin-right: 20px;
+}
+
+.block2 {
+  padding-right: 40px;
+}
+
+.navblock {
+  white-space: nowrap;
+  color: #bfbdbd;
+  margin-left: 20px;
+  padding-top: 15px;
+}
+
+.navblock a {
+  color: #bfbdbd;
+  font-size: 12px;
+}
+
+.navblock:active,
+.navblock:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navblock a:active,
+.navblock a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+    padding-right: 5px;
+  }
+
+  .navbar-nav > li {
+    float: none;
+  }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .collapsing {
+    overflow: hidden !important;
+  }
+
+  .navbar-toggle {
+    margin-right: 22px;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+}
+
+.nav .glyphicon {
+  font-size: 20px;
+}
+
+.footer {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-blocks {
+  background-color: #000;
+  color: #bfbdbd;
+}
+
+.footer-blocks h3 {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.footer-blocks ul {
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+.footer-blocks li {
+  font-size: 12px;
+  height: 30px;
+}
+
+.footer-block1 {
+  display: block;
+}
+
+.copy {
+  clear: left;
+  text-align: center;
+  padding-bottom: 30px;
+}

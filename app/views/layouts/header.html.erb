@@ -1,0 +1,57 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid usp">
+    <ul>
+      <li class="col-md-3"><p><i class="far fa-check-circle"></i> USP 1: Super-Sale</p></li>
+      <li class="col-md-3"><p><i class="far fa-check-circle"></i> USP 2: Discount</p></li>
+      <li class="col-md-3"><p><i class="far fa-check-circle"></i> USP 3: Free-Shipping</p></li>
+      <li class="col-md-3"><p><i class="far fa-check-circle"></i> USP 4: Payments</p></li>
+    </ul>
+  </div>
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class"navbar-brand">
+          <span><p><i class="fas fa-home"></i>
+            <%= link_to "Home", root_path  %>
+          </span></p>
+        </div>
+      </div>
+
+
+      <ul class="nav navbar-nav navbar-right block1">
+        <li>  <%= link_to "", '#', class: "glyphicon glyphicon-user", type: "span" %></li>
+        <li>  <%= link_to "", '#', class: "glyphicon glyphicon-log-in", type: "span" %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-tabs block2" role="tablist">
+        <li class="active navblock">
+          <p><i class="fas fa-bicycle"></i>
+          <%= link_to "Products", simple_pages_products_path, :class => "nav-link dropdown-toggle", :id => "navbarDropdownMenuLink", data: { toggle: 'dropdown' }, aria: { haspopup: 'true', expand: 'false'} %>
+          </p>
+        </li>
+        <li class="navblock">
+          <p><i class="fas fa-question-circle"></i>
+          <%= link_to "About", simple_pages_about_path, :class => "nav-link" %>
+        </p>
+        </li>
+        <li class="navblock">
+          <p><i class="far fa-envelope"></i>
+          <%= link_to "Contact", simple_pages_contact_path, :class => "nav-link" %>
+          </p>
+        </li>
+      </ul>
+      <div class="col-sm-3 col-md-4 navbar-right">
+        <form class="navbar-form">
+          <input class="input-group" type="search" placeholder="Search" aria-label="Search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+  </div>
+</nav>
+    <!--  <button>
+        <%= link_to "Sign up now!", '#', class: "btn btn-outline-dark", type: "button" %>
+      </button> for later -->

@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nameofapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <title>Bikes Berlin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "About", simple_pages_about_path %></li>
-            <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      </ul>
-    </nav>
+    <%= render :template => 'layouts/header' %>
+
 
     <%= yield %>
 
-    <footer>
-      &copy; 2018 Bike Berlin
+    <footer class="container-fluid">
+      <div class="footer-blocks row justify-content-center">
+        <div class="footer-block1 col-md-3 col-xs-1 offset-md-2">
+          <h3>Shop</h3>
+            <ul>
+              <li>Road bikes</li>
+              <li>Mountain bikes</li>
+              <li>Hybrid bikes</li>
+              <li>Electric bikes</li>
+              <li>Equipment</li>
+              <li>Apparel</li>
+            </ul>
+        </div>
+        <div class="footer-block2 col-md-3 col-xs-1">
+          <h3>Support</h3>
+            <ul>
+              <li>Customer service</li>
+              <li>Warranty</li>
+              <li>Bike sizing & fit guides</li>
+              <li>Manuals & user guides</li>
+            </ul>
+        </div>
+        <div class="footer-block2 col-md-3 col-xs-1">
+          <h3>Legal</h3>
+            <ul>
+              <li>Privacy policy & terms of use</li>
+              <li>Cookie policy</li>
+              <li>California Transparency Act</li>
+            </ul>
+          <h3>Payment</h3>
+        </div>
+        <div class="copy">
+          &copy; 2018 Bike Berlin
+        </div>
+      </div>
     </footer>
   </body>
 </html>
