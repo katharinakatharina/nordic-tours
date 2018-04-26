@@ -1,6 +1,11 @@
-<h1>Editing Product</h1>
+<div class="img-teaser">
+  <%= image_tag("bike2.jpg", class: "img-responsive") %>
+</div>
+<div class="container-fluid">
+  <h1>Editing Product</h1>
 
-<%= render 'form', product: @product %>
+  <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+  <%= link_to 'Show', @product %> |
+  <%= link_to 'Back', products_path %>
+</div>
