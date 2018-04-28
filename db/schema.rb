@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_28_130000) do
+ActiveRecord::Schema.define(version: 2018_04_28_145341) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2018_04_28_130000) do
     t.string "color"
     t.decimal "price", precision: 5, scale: 2
     t.string "brand"
-    t.integer "article_number"
     t.string "brand_image"
+    t.integer "article_number"
   end
 
 end
