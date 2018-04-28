@@ -2,13 +2,72 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product_index h2{
+.product_index h2 {
   font-size: 1.5em;
   text-transform: uppercase;
+}
+
+.product-show {
+  margin-top: 30px;
+}
+
+.show-header h1 {
+  margin-left: 3%;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+.product-show .img-responsive {
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
 .btn-new_product {
   font-size: 1.3em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.edit_btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit_btn button {
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.edit_btn button:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.product-price p {
+  font-size: 2em;
+}
+
+.products-all {
+  margin-top: 30px;
+}
+
+.products-all h1 {
+  text-align: center;
+}
+
+.single-product-all h2 {
+  margin-left: 15px;
+}
+
+.product-edit h1 {
+  text-align: center;
+}
+
+.product-edit form{
+  margin-left: auto;
+  margin-right: auto;
 }

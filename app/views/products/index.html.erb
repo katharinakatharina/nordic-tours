@@ -2,27 +2,30 @@
 <div class="img-teaser">
   <%= image_tag("bike2.jpg", class: "img-responsive") %>
 </div>
-<div class="container-fluid">
+<div class="container-fluid products-all">
   <h1>Products</h1>
     <div class="row">
       <% @products.each do |product| %>
-        <div class="col-sm-2 col-md-4">
+        <div class="col-sm-2 col-md-4 single-product-all">
           <h2><%= product.name %></h2>
           <p>Brand: <%= product.brand %></p>
-          <p>Art.nr: <%= product.article_number %></p>
           <%= image_tag(product.image_url, class: "img-responsive product_img") %>
-          <p>Price: <%= product.price %></p>
-          <p><%= product.description %></p>
-          <p>Colour: <%= product.color %></p>
-          <button><%= link_to 'Show', product %></button>
-          <button><%= link_to 'Edit', edit_product_path(product) %></button>
-          <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          <div class="product-price">
+            <p>Price: <%= product.price %></p>
+          </div>
+          <div class="edit_btn">
+            <button><%= link_to 'Show', product %></button>
+            <button><%= link_to 'Edit', edit_product_path(product) %></button>
+            <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          </div>
         </div>
       <% end %>
     </div>
   <br>
-  <button class="btn-new_product">
-    <i class="fas fa-plus-circle"></i>
-    <%= link_to 'New Product', new_product_path %>
-  </button>
+  <div class="edit_btn">
+    <button>
+      <i class="fas fa-plus-circle"></i>
+      <%= link_to 'New Product', new_product_path %>
+    </button>
+  </div>
 </div>
