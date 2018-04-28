@@ -1,0 +1,16 @@
+<%= image_tag("bike.jpg", class: "img-responsive") %>
+<div class="container-fluid landing_page">
+  <h2>Featured Product:</h2>
+  <div class="show-header">
+    <h3><%= @featured_product.name %></h3>
+    <div class="col-md-7">
+      <%= image_tag(@featured_product.image_url, class: "img-responsive product_img") %>
+    </div>
+    <div class="col-md-5">
+      <div class="product-price">
+        <p>Price: <%= @featured_product.price %></p>
+      </div>
+      <p><%= @featured_product.description %></p>
+    </div>
+  </div>
+</div>
