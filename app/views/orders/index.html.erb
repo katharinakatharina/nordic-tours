@@ -1,0 +1,15 @@
+<div class="container-fluid orders">
+  <h1>Orders</h1>
+	<% @orders.each do |order| %>
+  <div class="col-md-4 order_list_left">
+    <h2>Order # <%= order.id %></h2>
+  </div>
+  <div class="col-md-8 order_list_right">
+		<ul>
+      <li><h3><%= link_to order.product.name, order %></h3></li>
+      <li><%= link_to order.product.name, order %></li>
+			<li><strong>$ <%= order.product.price %></strong></li>
+    </ul>
+  </div>
+	<% end %>
+</div>
