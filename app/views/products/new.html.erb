@@ -5,8 +5,10 @@
   <h1>New Product</h1>
   <%= render 'form', product: @product %>
   <div class="edit_btn">
-    <button>
-      <%= link_to 'Back', products_path %>
-    </button>
+    <div class="button">
+      <span>
+        <%= link_to 'Back', products_path %>
+      </span>
+    </div>
   </div>
 </div>

@@ -21,15 +21,23 @@ a {
   padding-right: 0;
 }
 
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .usp {
   background-color: #19aac4;
   padding-bottom: 2px;
   z-index: 2;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .usp ul {
   list-style-type: none;
-  padding-top: 14px;
+  padding-top: 10px;
+  height: 20px;
 }
 
 .usp p {
@@ -46,13 +54,19 @@ a {
   margin-top: 90px;
 }
 
+@media (max-width: 600px) {
+  .img-teaser {
+    margin-top: 60px;
+  }
+}
+
 .container-fluid p {
   margin-left: 4%;
   margin-right: 4%;
 }
 
 .logo {
-  width: 115px;
+  width: 125px;
   margin-top: 10px;
 }
 
@@ -128,6 +142,9 @@ a {
 
 .input-group {
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
 }
 
 .input-group-addon {
@@ -139,17 +156,34 @@ a {
 }
 
 .block1 {
-  margin-right: 80px;
+  margin-right: 35px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1024px) {
   .block1 {
-    margin-right: 55px;
+    margin-top: 60px;
+    margin-right: -25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .block1 {
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 
 .block2 {
   padding-right: 40px;
+}
+
+@media (max-width: 700px) {
+  .input-group {
+    width: 175px;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -179,7 +213,7 @@ a {
 
 .navblock a {
   color: #bfbdbd;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .navblock a:active,
@@ -190,6 +224,10 @@ a {
 
 .navbar-header {
   width: 250px;
+}
+
+.navbar-toggle {
+  margin-top: 15px;
 }
 
 @media (max-width: 991px) {
@@ -234,6 +272,18 @@ a {
 
   .usp {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-toggle {
+    margin-right: 5px;
+    margin-top: 15px;
+    border: 1px solid white;
+  }
+
+  .logo {
+    width: 100px;
   }
 }
 
@@ -353,9 +403,10 @@ a {
 //Random products -> Latest arrival
 
 .newest-arrival {
-  background-color: #19AAC4;
+  background-color: #19aac4;
   padding-top: 35px;
   padding-bottom: 35px;
+  clear: left;
 }
 
 .newest-arrival h2 {
@@ -380,17 +431,17 @@ a {
   margin-bottom: 20px;
 }
 
-.buy_btn button {
-  border: 2px solid #2DBF09;
-  background-color: #19AAC4;
+.buy_btn span {
+  border: 2px solid #2dbf09;
+  background-color: #19aac4;
   padding: 10px 25px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
 }
 
-.buy_btn button:hover {
-  background-color: #2DBF09;
+.buy_btn span:hover {
+  background-color: #2dbf09;
   color: white;
   text-decoration: none;
 }
@@ -400,11 +451,33 @@ a {
 }
 
 .buy_btn a:hover {
-  background-color: #2DBF09;
+  background-color: #2dbf09;
   text-decoration: none;
   color: white;
 }
 
-.img-left img{
+.img-left img {
   width: 75%;
+}
+
+.button {
+  margin-top: 25px;
+}
+
+.button span {
+  border: 1px solid black;
+  padding: 7px 15px;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button span:hover {
+  background-color: black;
+  color: white;
+}
+
+.button a:hover {
+  text-decoration: none;
 }

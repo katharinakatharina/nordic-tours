@@ -6,7 +6,9 @@
 
 
   <div class="edit_btn">
-    <button><%= link_to 'Edit', edit_product_path(@product) %> </button>
-    <button><%= link_to 'Back', products_path %></button>
+    <div class="button">
+      <span><%= link_to 'Edit', edit_product_path(@product) %> </span>
+      <span><%= link_to 'Back', products_path %></span>
+    </div>
   </div>
 </div>

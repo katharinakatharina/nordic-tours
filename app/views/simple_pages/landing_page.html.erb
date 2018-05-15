@@ -30,23 +30,22 @@
    </a>
   </div>
   <h1>Products</h1>
-  <div class="row">
-    <% @products.each do |product| %>
-      <%= render product %>
-    <% end %>
+  <div class="lp-products">
+    <%= render @products %>
   </div>
-  <div class="newest-arrival">
-    <h2>See our latest Arrival:</h2>
+
+  <div class="row newest-arrival">
+    <h2 class="col-sm-12">See our latest Arrival:</h2>
     <div class="col-md-7 img-left">
 
       <% product = Product.random %>
       <%= image_tag(product.image_url) %>
     </div>
-    <div class="col md-5 description-right">
+    <div class="col-md-5 description-right">
       <h3><%= link_to product.name, product %></h3>
       <p><%=  product.description %></p>
       <div class="buy_btn">
-        <button><i class="fas fa-arrow-right"></i> <%= link_to 'See more', product %></button>
+        <span><i class="fas fa-arrow-right"></i> <%= link_to 'See more', product %></span>
       </div>
     </div>
   </div>
