@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col-lg-3 col-md-2">
     <div class="navbar-brand2">
-       <%= link_to image_tag('bestberlinbikes-w_logo.png', class: "logo"), root_path %>
+       <%= link_to image_tag('bestberlinbikes-w_logo.png', class: "logo"), root_url %>
       </span>
     </div>
     </div>
@@ -40,12 +40,12 @@
           <ul class="navbar-nav navbar-right block2 mr-auto">
             <li class="nav-item active navblock">
               <p><i class="fas fa-bicycle"></i>
-                <%= link_to "Products", products_path, :class => "nav-link" %>
+                <%= link_to "Products", products_, :class => "nav-link" %>
               </p>
             </li>
             <li class="nav-item navblock">
               <p><i class="fas fa-question-circle"></i>
-                <%= link_to "About", simple_pages_about_path, :class => "nav-link" %>
+                <%= link_to "About", simple_pages_about_url, :class => "nav-link" %>
               </p>
             </li>
     <!--  <li class="nav-item dropdown navblock">
@@ -61,7 +61,7 @@
       </li> -->
           <li class="nav-item navblock">
             <p><i class="far fa-envelope"></i>
-              <%= link_to "Contact", simple_pages_contact_path, :class => "nav-link" %>
+              <%= link_to "Contact", simple_pages_contact_url, :class => "nav-link" %>
             </p>
           </li>
         </ul>
