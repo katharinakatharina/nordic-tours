@@ -15,29 +15,39 @@
     <span class="icon-bar"></span>
   </button>
   <div class="row">
-    <div class="navbar-brand2 col-lg-2 col-md-3" href="#"><%= link_to image_tag('bestberlinbikes-w_logo.png', class: "logo"), root_path %>
+    <div class="navbar-brand2 col-lg-2 col-md-3" href="#"><%= link_to image_tag('bestberlinbikes-w_logo.png', class: "logo"), root_url %>
     </div>
     <div class="col-md-4 col-sm-6 navbar-center">
-      <form class="input-group">
+    <!--  <form class="input-group">
         <input class="search form-control input-group-sm" type="search" placeholder="Search" aria-label="Search">
         <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span></span>
-      </form>
+      </form> -->
+     <%= form_with(url: products_path, method: 'get', local: true, class: 'input-group' ) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'search', :class => "form-control" %>
+          <span class="input-group-btn">
+
+          <%= button_tag(type: 'submit', class: "btn btn-default") do %>
+            <span class="glyphicon glyphicon-search"></span>
+          <% end %>
+        </span>
+      <% end %>
+
     </div>
     <div class="collapse navbar-collapse col-md-7 navbar-right" id="navbarTogglerDemo03">
       <ul class="nav navbar-nav navbar-right block1">
         <li class="nav-item active navblock">
           <p><i class="fas fa-bicycle"></i>
-          <%= link_to "Products", products_path, :class => "nav-link" %>
+          <%= link_to "Products", products_url, :class => "nav-link" %>
         </p>
         </li>
         <li class="nav-item navblock">
           <p><i class="fas fa-question-circle"></i>
-            <%= link_to "About", simple_pages_about_path, :class => "nav-link" %>
+            <%= link_to "About", simple_pages_about_url, :class => "nav-link" %>
           </p>
         </li>
         <li class="nav-item navblock">
           <p><i class="far fa-envelope"></i>
-            <%= link_to "Contact", simple_pages_contact_path, :class => "nav-link" %>
+            <%= link_to "Contact", simple_pages_contact_url, :class => "nav-link" %>
           </p>
         </li>
         <li>  <%= link_to "", '#', class: "glyphicon glyphicon-user", type: "span" %></li>
