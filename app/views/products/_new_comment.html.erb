@@ -1,0 +1,21 @@
+<div class="container-fluid review-block">
+<% if signed_in? %>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"><h4>Add a review:</h4></div>
+  <div class="col-md-6">
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+    <p>
+      <%= f.label :body, "Comment:" %>
+      <%= f.text_area :body %>
+    </p>
+    <p>Choose the stars you want to give:</p>
+      <div class="rating"></div>
+
+
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
+  </div>
+  <% end %>
+<% end %>
+</div>

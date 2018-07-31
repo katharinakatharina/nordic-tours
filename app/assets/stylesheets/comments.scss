@@ -1,0 +1,33 @@
+.review-block h4 {
+  text-align: center;
+}
+.review-block textarea {
+  width: 70%;
+  min-height: 50px;
+}
+
+.rating {
+  margin-left: 4%;
+}
+
+.rated {
+  margin-left: 4%;
+  margin-bottom: 25px;
+}
+
+.review-block input {
+  border: 1px solid black;
+  padding: 7px 15px;
+  color: white;
+  background-color: black;
+  margin-top: 15px;
+}
+
+.review-block input:hover {
+  background-color: black;
+  color: white;
+}
+
+.review-block input a:hover {
+  text-decoration: none;
+}

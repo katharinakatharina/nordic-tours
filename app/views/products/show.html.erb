@@ -1,10 +1,9 @@
+<%= javascript_include_tag 'jquery.raty.js', "data-turbolinks-track": false %>
 <div class="img-teaser">
   <%= image_tag("bike2.jpg", class: "img-responsive") %>
 </div>
 <div class="container-fluid product-show">
-  <%= @product.comments.order(rating: :desc).first %>
   <%= render 'product-detail', product: @product %>
-
 
   <div class="edit_btn">
     <div class="button">
@@ -12,4 +11,12 @@
       <span><%= link_to 'Back', products_path %></span>
     </div>
   </div>
+</div>
+<div class="container-fluid rating-block">
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
+
+  <!--<strong>Highest comment:</strong>
+  <p><%= @product.highest_rating_comment&.rating %></p>
+  <p><%= @product.lowest_rating_comment&.rating %></p>-->
 </div>
