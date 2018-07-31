@@ -15,6 +15,7 @@
 <div class="container-fluid rating-block">
   <%= render 'new_comment' %>
   <%= render 'comments' %>
+  <%= will_paginate @comments %>
 
   <!--<strong>Highest comment:</strong>
   <p><%= @product.highest_rating_comment&.rating %></p>

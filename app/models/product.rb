@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
   has_many :comments
   def self.search(search_term)
     if Rails.env.development?
@@ -14,6 +15,6 @@ class Product < ApplicationRecord
     comments.rating_asc.first
   end
   def average_rating
-  comments.average(:rating).to_f
-end
+    comments.average(:rating).to_f
+  end
 end
