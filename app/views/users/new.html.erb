@@ -1,5 +1,12 @@
-<h1>New User</h1>
+<div class="img-teaser">
+  <%= image_tag("bike2.jpg", class: "img-responsive") %>
+</div>
 
-<%= render 'form', user: @user %>
+<div class="container-fluid">
 
-<%= link_to 'Back', users_path %>
+  <h1>New User</h1>
+
+  <%= render 'form', user: @user %>
+
+  <%= link_to 'Back', users_path %>
+</div>

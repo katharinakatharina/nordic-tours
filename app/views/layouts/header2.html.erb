@@ -52,7 +52,7 @@
         </li>
         <!--<li>  <%= link_to "", '#', class: "glyphicon glyphicon-user", type: "span" %></li>
         <li>  <%= link_to "", '#', class: "glyphicon glyphicon-log-in", type: "span" %></li>-->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto block1">
           <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
