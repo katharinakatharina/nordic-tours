@@ -1,8 +1,10 @@
 
 require 'rails_helper'
  describe UsersController, type: :controller do
-   let(:user1) { User.create!(email: "user1@test.de", password: "testtest") }
-   let(:user2) { User.create!(email: "user2@test.de", password: "testtest") }
+   before(:each) do
+       @user1 = FactoryBot.create(:user)
+       @user2 = FactoryBot.create(:user)
+     end
 
    describe 'GET #show' do
      context 'when a user logs in' do
@@ -11,11 +13,11 @@ require 'rails_helper'
       end
 
       it "loads correct user details" do
-        get :show, params: { id: user1.id }
+        get :show, params: { id: @user1.id }
         expect(response).to be_ok
-        expect(assigns(:user1)).to eq user
+        expect(assigns(:user)).to eq @user1
       end
-      
+
     end
   end
 end
