@@ -55,6 +55,7 @@
         <ul class="navbar-nav ml-auto block1">
           <% if user_signed_in? %>
           <li class="nav-item">
+            <p><%= link_to 'Profile', user_path(current_user), class: "nav-link" %></p>
             <%= link_to('', destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-remove-circle", type: "span") %>
           </li>
           <% else %>
