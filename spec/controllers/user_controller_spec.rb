@@ -1,7 +1,7 @@
 
 require 'rails_helper'
  describe UsersController, type: :controller do
-   before(:each) do
+   before do
        @user1 = FactoryBot.create(:user)
        @user2 = FactoryBot.create(:user)
      end
@@ -9,7 +9,7 @@ require 'rails_helper'
    describe 'GET #show' do
      context 'when a user logs in' do
       before do
-        sign_in :user1
+        sign_in @user1
       end
 
       it "loads correct user details" do

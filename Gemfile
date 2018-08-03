@@ -74,3 +74,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
 
 gem 'stripe'
+
+group :test do
+  gem 'database_cleaner'
+end
