@@ -75,6 +75,8 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
+gem "brakeman"
+
 group :test do
   gem 'database_cleaner'
 end
