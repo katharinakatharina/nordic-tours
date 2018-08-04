@@ -5,6 +5,7 @@
     <%= image_tag(product.image_url, class: "img-responsive product_img") %>
     <div class="product-price">
       <p>Price: <%= product.price %></p>
+      <% logger.debug "Product: #{product.name}"%>
     </div>
     <div class="edit_btn">
       <div class="button"><span><%= link_to 'Show', product %></span>
