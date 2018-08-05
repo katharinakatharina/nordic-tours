@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
+
+
   # GET /products
   # GET /products.json
   def index
@@ -51,7 +54,9 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
   end
+
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
@@ -85,6 +90,8 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :price, :color, :brand, :brand_image, :article_number)
+      params.require(:product).permit(:name, :description, :image_url, :price, :brand, :brand_image, :article_number, :color)
     end
+
+
 end

@@ -77,6 +77,8 @@ gem 'stripe'
 
 gem "brakeman"
 
+gem 'chosen-rails'
+
 group :test do
   gem 'database_cleaner'
 end

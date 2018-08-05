@@ -13,6 +13,8 @@
 //= require jquery3
 //= require jquery.raty.js
 //= require rails-ujs
+//= require chosen-jquery
+//= require scaffold
 //= require activestorage
 //= require turbolinks
 //= require_tree ../../../vendor/assets/javascripts

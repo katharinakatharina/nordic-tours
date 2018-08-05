@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2018_07_31_193846) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "color"
+    t.string "color",
     t.decimal "price", precision: 5, scale: 2
     t.string "brand"
     t.string "brand_image"
