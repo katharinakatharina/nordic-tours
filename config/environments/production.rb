@@ -83,9 +83,6 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  # set the relative root, because we're deploying to /nameofapp
-  config.action_controller.relative_url_root  = "/nameofapp"
-  RAILS_ENV=production bundle exec rake assets:precompile RAILS_RELATIVE_URL_ROOT=/nameofapp
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
@@ -93,15 +90,16 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  # Memecachier - Dalli
   config.cache_store = :dalli_store,
-                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
-                     :failover => true,
-                     :socket_timeout => 1.5,
-                     :socket_failure_delay => 0.2,
-                     :down_retry_delay => 60
-                    }
+                      (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                      {:username => ENV["MEMCACHIER_USERNAME"],
+                       :password => ENV["MEMCACHIER_PASSWORD"],
+                       :failover => true,
+                       :socket_timeout => 1.5,
+                       :socket_failure_delay => 0.2,
+                       :down_retry_delay => 60
+                      }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
