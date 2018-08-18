@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+var refreshRating = function() {
 
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
@@ -16,15 +16,14 @@ $(document).on('turbolinks:load', function () {
       return $(this).attr('data-score');
     }
   });
+};
 
-  $('.img-zoom').elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});
-
- $(function() {
-  return $('.chosen-select').chosen({
-    allow_single_deselect: true,
-    no_results_text: 'No results matched',
-    width: '200px'
+$(document).on('turbolinks:load', function () {
+  refreshRating();
+  $('.img-zoom').elevateZoom({
+    tint:true,
+    tintColour:'#F90',
+    tintOpacity:0.5
   });
-});
 
 });

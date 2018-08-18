@@ -79,6 +79,9 @@ gem "brakeman"
 
 gem 'chosen-rails'
 
+gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.2.0'
+
 group :test do
   gem 'database_cleaner'
 end

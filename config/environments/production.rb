@@ -83,6 +83,10 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  # set the relative root, because we're deploying to /nameofapp
+  config.action_controller.relative_url_root  = "/nameofapp"
+  RAILS_ENV=production bundle exec rake assets:precompile RAILS_RELATIVE_URL_ROOT=/nameofapp
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter

@@ -13,6 +13,5 @@
  *= require jquery.raty
  *= require_tree .
  *= require_self
- *= require chosen
  *= require font-awesome
  */
