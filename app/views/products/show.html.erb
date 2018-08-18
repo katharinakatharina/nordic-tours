@@ -9,6 +9,7 @@
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
     <% end %>
+    <p id="notice" class="alert alert-info" style="display:none" role="alert">A new comment was posted!</p>
     <div class="edit_btn">
       <div class="button">
         <span><%= link_to 'Edit', edit_product_path(@product) %> </span>
