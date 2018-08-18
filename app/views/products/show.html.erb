@@ -4,11 +4,13 @@
 </div>
 <% cache @product do %>
   <div class="container-fluid product-show">
+    <div class="row" data-product-id="<%= @product.id %>">
     <%= render 'product-detail', product: @product %>
     <%= form_with(url: '/payments/create') do |form| %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
     <% end %>
+  </div>
     <p id="notice" class="alert alert-info" style="display:none" role="alert">A new comment was posted!</p>
     <div class="edit_btn">
       <div class="button">
