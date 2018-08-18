@@ -64,6 +64,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    dalli (2.7.8)
     database_cleaner (1.7.0)
     devise (4.4.3)
       bcrypt (~> 3.0)
@@ -239,6 +240,7 @@ DEPENDENCIES
   cancancan (~> 1.10)
   chosen-rails
   coffee-rails (~> 4.2)
+  dalli
   database_cleaner
   devise
   factory_bot_rails (~> 4.0)

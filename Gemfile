@@ -77,6 +77,8 @@ gem 'stripe'
 
 gem "brakeman"
 
+gem 'dalli'
+
 gem 'chosen-rails'
 
 gem "font-awesome-rails"

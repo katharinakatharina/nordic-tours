@@ -1,4 +1,4 @@
-
+<% cache product do %>
   <div class="col-sm-6 col-md-4 single-product-all">
     <h2><%= link_to product.name, product %></h2>
     <p>Brand: <%= product.brand %></p>
@@ -13,3 +13,4 @@
       <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span></div>
     </div>
   </div>
+<% end %>

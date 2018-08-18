@@ -2,25 +2,29 @@
 <div class="img-teaser">
   <%= image_tag("bike2.jpg", class: "img-responsive") %>
 </div>
-<div class="container-fluid product-show">
-  <%= render 'product-detail', product: @product %>
-  <%= form_with(url: '/payments/create') do |form| %>
-    <%= render partial: "shared/stripe_checkout_button" %>
-    <%= hidden_field_tag(:product_id, @product.id) %>
-  <% end %>
-  <div class="edit_btn">
-    <div class="button">
-      <span><%= link_to 'Edit', edit_product_path(@product) %> </span>
-      <span><%= link_to 'Back', products_path %></span>
+<% cache @product do %>
+  <div class="container-fluid product-show">
+    <%= render 'product-detail', product: @product %>
+    <%= form_with(url: '/payments/create') do |form| %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+    <% end %>
+    <div class="edit_btn">
+      <div class="button">
+        <span><%= link_to 'Edit', edit_product_path(@product) %> </span>
+        <span><%= link_to 'Back', products_path %></span>
+      </div>
     </div>
   </div>
-</div>
-<div class="container-fluid rating-block">
-  <%= render 'new_comment' %>
-  <%= render 'comments' %>
-  <%= will_paginate @comments %>
+<% end %>
+<% cache @comments do %>
+  <div class="container-fluid rating-block">
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
+    <%= will_paginate @comments %>
 
-  <!--<strong>Highest comment:</strong>
-  <p><%= @product.highest_rating_comment&.rating %></p>
-  <p><%= @product.lowest_rating_comment&.rating %></p>-->
-</div>
+    <!--<strong>Highest comment:</strong>
+    <p><%= @product.highest_rating_comment&.rating %></p>
+    <p><%= @product.lowest_rating_comment&.rating %></p>-->
+  </div>
+<% end %>
