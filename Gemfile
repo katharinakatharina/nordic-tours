@@ -79,10 +79,14 @@ gem "brakeman"
 
 gem 'dalli'
 
+gem 'rails_12factor', group: :production
+
 gem 'chosen-rails'
 
 gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 5.2.0'
+
+gem 'redis-rails'
 
 group :test do
   gem 'database_cleaner'
